@@ -7,6 +7,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';    //importing 
+import Create from './components/create';
+import Read from './components/read';
+import Books from './components/books';
 
 function App() {
   return (
@@ -19,13 +22,17 @@ function App() {
             <Nav.Link href="/">Home</Nav.Link>     {/*you can change the page name */}
             <Nav.Link href="/create">Create</Nav.Link>
             <Nav.Link href="/read">Read</Nav.Link>
+            <Nav.Link href="/books">Books</Nav.Link>
+
           </Nav>
         </Container>
       </Navbar>
       <Routes>    {/*Route allow you to access another page basically */}
         <Route path='/' element={<Content></Content>}></Route>
-        <Route path='create' element={<Footer></Footer>}></Route>
-        <Route path='read' element={<Header></Header>}></Route>
+        <Route path='create' element={<Create></Create>}></Route>
+        <Route path='read' element={<Read></Read>}></Route>
+     
+        
         
       </Routes>
       {/* <Header></Header>
